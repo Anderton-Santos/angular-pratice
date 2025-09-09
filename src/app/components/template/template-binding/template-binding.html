@@ -1,0 +1,28 @@
+<div class="mb-6">
+  <p class="font-bold text-2xl ">template-binding - Interpolação de texto!</p>
+
+  <p>{{name}} - {{age}} - {{Sun(10, 4)}}</p>
+
+  <p>{{2 + age}} - {{age > 10 ? "Teste" : "Teste 2"}}</p>
+</div>
+
+
+<div class="mb-6">
+  <h1>Porpety Binding</h1>
+
+  <span>Property Binding é a ligação de uma propriedade do DOM ou de um componente filho a uma variável do componente,
+    permitindo que o valor do componente seja exibido ou usado na view.</span><br>
+
+  <button class="bg-gray-400 rounded-sm p-1 disabled:cursor-not-allowed" [disabled]="isDisabled">Button</button>
+
+  <img [src]="srcValue" [alt]="name" [title]="name">
+
+</div>
+
+<div class="mb-6">
+  <h1 class="text-2xl font-bold">Atrtribute biding</h1>
+  <p [attr.aria-label]="name">Anderton Santos</p>
+
+
+
+</div>
