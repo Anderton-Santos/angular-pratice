@@ -1,10 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FormsModule } from '@angular/forms'
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-template-binding',
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: './template-binding.html',
   styleUrl: './template-binding.css',
+  standalone: true,
   changeDetection: ChangeDetectionStrategy.Default
 
 })
@@ -26,6 +29,24 @@ export class TemplateBinding {
       this.name = "Jão e Maria"
 
     }, 1000)
+  }
+
+  public Soma() {
+    return this.age++
+  }
+  public Sub() {
+    return this.age--
+  }
+
+  public onKeyDown(event: Event) {
+    return console.log(event)
+  }
+
+  public onMouseMove(event: MouseEvent) {
+    return console.log({
+      clientX: event.clientX,
+      clientY: event.clientY,
+    })
   }
 
 

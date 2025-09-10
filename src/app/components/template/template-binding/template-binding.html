@@ -1,3 +1,5 @@
+<!-- Interpolação -->
+
 <div class="mb-6">
   <p class="font-bold text-2xl ">template-binding - Interpolação de texto!</p>
 
@@ -6,6 +8,7 @@
   <p>{{2 + age}} - {{age > 10 ? "Teste" : "Teste 2"}}</p>
 </div>
 
+<!-- Porpety biding -->
 
 <div class="mb-6">
   <h1>Porpety Binding</h1>
@@ -19,10 +22,47 @@
 
 </div>
 
+<!-- Atrtribute biding -->
+
 <div class="mb-6">
   <h1 class="text-2xl font-bold">Atrtribute biding</h1>
-  <p [attr.aria-label]="name">Anderton Santos</p>
+  <p [attr.title]="name" [attr.aria-label]="name">Anderton Santos</p>
+
+</div>
 
 
+<!-- biding event -->
+
+<div class="p-6 w-full h-full mb-6 flex gap-4">
+
+  <button class="bg-gray-400 px-2 rounded-2xl" (click)="Soma()">+</button>
+  <div [class.background-red]="age > 32" [class.background-blue]="age < 32">
+    <p class="text-gray-300 font-black p-2"> {{ age }}</p>
+  </div>
+  <button class="bg-gray-400 px-2 rounded-2xl" (click)="Sub()">-</button>
+
+</div>
+
+<input class="border border-black" (keydown.shift.t)="onKeyDown($event)">
+
+<div class="mt-8 w-[200px] h-[200px] bg-red-400" (mousemove)="onMouseMove($event)">
+
+</div>
+
+<!-- Two-Away biding -->
+
+<div class="mt-8 border-b p-4">
+  <h3>Two-way biding</h3>
+  <input class=" border border-black w-[30%]" [(ngModel)]="name">
+  {{name}}
+</div>
+
+
+
+<div class="mt-8 border-b p-4">
+  <h1>Diretivas de atributos</h1>
+  <div [ngClass]="{'background-red': isDisabled }">Classes condicionais</div>
+
+  <div>estilo dinâmico</div>
 
 </div>
